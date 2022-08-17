@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
+
+
+* {
+    box-sizing: border-box;
+}
+
+img {
+    max-width:100%;
+    height:auto;
+}
+
+body {
+    background-color:hsl(210, 46%, 95%);
+    font-family:'Barlow Semi Condensed';
+    font-size:10px;
+    display:flex;
+    align-items:center;
+    flex-direction:column;
+}
+/*Color and Grid Design*/
+
+p {
+    font-size:15px;
+}
+.lighter-font h1 {
+    color: white;
+}
+
+.lighter-font h2 {
+    color: white;
+}
+
+.lighter-font p {
+    color:hsl(0, 0%, 81%);
+}
+
+.darker-font h1 {
+    color:hsl(217, 19%, 35%);
+}
+
+.darker-font h2 {
+    color:hsl(217, 19%, 35%);
+}
+
+.darker-font p {
+    color: hsl(217, 19%, 35%);
+}
+
+.grid-card:nth-child(1) {
+    grid-area: card-1;
+    background-color:hsl(263, 55%, 52%);
+   
+}
+.grid-card:nth-child(2){
+    grid-area: card-2;
+    background-color:hsl(217, 19%, 35%);
+}
+
+.grid-card:nth-child(3){
+    grid-area: card-3;
+    background-color:white;
+}
+
+.grid-card:nth-child(4){
+    grid-area: card-4;
+    background-color: hsl(219, 29%, 14%);
+}
+
+.grid-card:nth-child(5){
+    grid-area: card-5;
+    background-color:white;
+}
+
+
+.grid-card {
+    padding:2rem 1.5rem;
+    margin-top:20px;
+    border-radius:12px;
+    width:350px;
+    box-shadow: 0 0px 15px 2px rgba(0, 0, 0, 0.192);
+    transition: all 0.1s ease;;
+}
+
+.grid-card h1 {
+    margin-top: 15px;
+}
+
+.grid-card p {
+    margin-bottom: -2px;
+    filter:opacity(70%);
+}
+
+.profile-info {
+    position:relative;
+    left:15px;
+    bottom:18px;
+}
+
+.profile-info p {
+    margin-top: -12px;
+    font-size:13px;
+    filter:opacity(50%);
+}
+
+
+.profile img {
+    width:30px;
+    height:30px;
+    border-radius:100%;
+    border: solid  2px;
+    position:relative;
+    bottom:3px;
+}
+.purple-border {
+    color:hsl(263, 73%, 72%);
+}
+.white-border {
+    color:white;
+}
+
+.profile {
+    display:inline-flex;
+    margin-bottom:-20px;
+}
+
+.quotations {
+    background-image:url(./images/bg-pattern-quotation.svg);
+    background-position:top right 30px;
+    background-repeat:no-repeat;
+    background-size: 8rem;
+}
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+    margin-top:15px;
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+/*Syntax for Grid-Template-Area & Desktop Display*/
+
+@media(min-width:70rem) {
+
+    body {
+        margin-top:10rem;
+        overflow:hidden;
+    }
+
+    .grid-area {
+        display:grid;
+        gap:1rem;
+        grid-template-areas: 
+        'card-1 card-1 card-2 card-5'
+        'card-3 card-4 card-4 card-5'
+    }
+
+    .grid-card:nth-child(1){
+        grid-area: card-1;
+        width:540px;
+    }
+    .grid-card:nth-child(2){
+        grid-area: card-2;
+        width:300px;
+    }
+    .grid-card:nth-child(3){
+        grid-area: card-3;
+        width:280px;
+    }
+    .grid-card:nth-child(4){
+        grid-area: card-4;
+        width:550px;
+    }
+    .grid-card:nth-child(5){
+        grid-area: card-5;
+        width:300px;
+    }
+
+
+    .grid-card:hover {
+        transform:translateY(-10px);
+        box-shadow: 0 0px 15px 2px rgba(48, 48, 48, 0.432);
+    }
+
+}
+
